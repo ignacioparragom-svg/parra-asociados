@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-navy-950: #0c111d;
+  --color-gold-400: #c5a059;
+  --color-gold-500: #b08d4a;
+  --color-cream-100: #f8f5f2;
+  --color-slate-200: #e2e8f0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-navy-950 text-slate-200 font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+.gold-link {
+  @apply text-gold-400 hover:text-gold-500 transition-colors duration-300;
+}
+
+.elegant-card {
+  @apply bg-white/[0.03] border border-white/10 hover:border-gold-400/30 transition-all duration-500;
+}
+
+.section-divider {
+  @apply h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent;
+}
